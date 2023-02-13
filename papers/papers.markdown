@@ -1,0 +1,12 @@
+---
+layout: page
+title: Papers
+permalink: /papers/
+---
+
+![cover](./esg_paper_cover.jpg)
+
+[Intergating ESG considerations into Securties Lending](https://www.rmahq.org/press-releases/2021/rma-commissioned-white-paper-provides-academic-review-of-esg-data-landscape-and-proposes-best-practices-to-incorporate-esg-into-securities-lending/?gmssopc=1)
+A white paper that provides an academic view of the ESG data landscape to propose best practices for agent lenders and asset owners to intergrate sustainable investing considerations into a lending program.
+
+The paper can be found [here](https://www.paslaonline.com/downloads/esgresources/Integrating-ESG-Considerations-RMA-Doc-202108.pdf).

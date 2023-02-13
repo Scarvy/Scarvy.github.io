@@ -4,15 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I'm a Quantitative Researcher from Boston. I have a passion for coding and love to experiment with things. While I work for State Street Associates, State Street's research arm, the opinions epxressed on this blog are solely my own and do not reflect company policy in any way. Most of my recent work is only available within State Street / State Street Associates, but see (link to publications).
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+These days, I mostly write in Python, but hope to explore other languages like C++, Rust, and TypeScript.
