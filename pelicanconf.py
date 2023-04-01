@@ -1,10 +1,10 @@
 AUTHOR = 'Scott Carvalho'
 SITENAME = 'Scott Carvalho'
 SITEURL = 'http://127.0.0.1:8000/'
-TIMEZONE = 'America/New_York'
+TIMEZONE = 'US/Eastern'
 DEFAULT_LANG = 'en'
 
-SUBTITLE = '''Hi, I'm Scott, a programmer from Boston'''
+SUBTITLE = '''Hi, I'm Scott!'''
 SUBTEXT = '''This is my personal blog.
 '''
 COPYRIGHT = '©2022'
@@ -15,11 +15,10 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['readtime', 'search', 'neighbors', 'pelican-toc']
 STATIC_PATHS = [
     'images',
-    'images/favicon.ico',
-    'extra/robots.txt',
+    'extra',
+    'images/favicon.ico'
     ]
 EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
     'images/favicon.ico': {'path': 'favicon.ico'},
     }
 DISPLAY_PAGES_ON_MENU = True

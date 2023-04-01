@@ -1,11 +1,20 @@
 Title: About
 
-I'm a programmer from Boston. I have a passion for coding and love to experiment with things. I previously worked at State Street Associates, State Street's quantitative research arm, working with academic's from Harvard and MIT developing new investment tools for investment analysis for some of the largest asset owners in the world.
+<img src="{static}/images/headshot.jpg" alt="screenshot" class="image-center image-small" />
 
-These days, I mostly write in Python, but hope to explore other languages like C++, Rust, and TypeScript.
+# About me
+
+I'm a programmer and technology enthusiast from Boston, MA. I have a passion for coding and love to experiment with things. I previously worked at [State Street Associates](https://www.statestreet.com/us/en/asset-manager/solutions/research), State Street's quantitative research arm, working with academics from Harvard and MIT to develop new investment tools (indicators, models, and publications) for some of the largest asset owners in the world.
+
+These days, I mostly write in Python but hope to explore other languages like C++, Rust, and TypeScript.
 
 ## Contact
 
-Email me at [scottcarvalho71@gmail.com](scottcarvalho71@gmail.com) (personal).
+Email me at [scottcarvalho71@gmail.com](scottcarvalho71@gmail.com)
 
-I upload some projects built in my spare time to [GitHub](https://github.com/Scarvy).
+## Technical Skills
+
+- Programming Languages: Python, Matlab
+- Python Packages: Matplotlib, Pandas, Numpy, Regex
+- Database: MySQL
+- Miscellaneous: Git, GitHub

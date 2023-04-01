@@ -1,8 +1,4 @@
-Title: Intergating ESG considerations into Securties Lending
-Date: 2021-08-01
-Tags: ESG, Securities Lending, Vendor Data
-Category: Papers
-Summary: A white paper that provides an academic view of the ESG data landscape to propose best practices for agent lenders and asset owners to intergrate sustainable investing considerations into a lending program.
+Title: Publications
 
 <img src="{static}/images/esg_paper_cover.jpg" alt="screenshot" class="image-left image-thumbnail" />
 
