@@ -13,6 +13,16 @@ url = "/pages/books.html"
 title = "Books"
 
 [[input.files]]
-path = "intergating-esg-considerations-into-securties-lending.html"
-url = "/intergating-esg-considerations-into-securties-lending.html"
-title = "Intergating ESG considerations into Securties Lending"
+path = "pages/publications.html"
+url = "/pages/publications.html"
+title = "Publications"
+
+[[input.files]]
+path = "pages/resume.html"
+url = "/pages/resume.html"
+title = "Resume"
+
+[[input.files]]
+path = "pages/talks.html"
+url = "/pages/talks.html"
+title = "Talks"
