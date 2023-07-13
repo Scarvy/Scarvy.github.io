@@ -26,3 +26,13 @@ title = "Resume"
 path = "pages/talks.html"
 url = "/pages/talks.html"
 title = "Talks"
+
+[[input.files]]
+path = "how-i-built-my-personal-blog-using-pelican.html"
+url = "/how-i-built-my-personal-blog-using-pelican.html"
+title = "How I built my personal blog using Pelican"
+
+[[input.files]]
+path = "welcome.html"
+url = "/welcome.html"
+title = "Welcome!"
