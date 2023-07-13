@@ -2,8 +2,7 @@ Title: Talks
 
 # 2022
 
-
-- State Street Research Retreat Fall 2022 - *Wisdom of the Crowds: Combining Behavorial and Media Sentiment for Stock Selection* - [overview](https://www.statestreet.com/us/en/asset-manager/insights/live-research-retreat-fall-2022)
+- State Street Research Retreat Fall 2022 - *"Wisdom of the Crowd For Stock Analysis"* - [overview](https://www.statestreet.com/us/en/asset-manager/insights/live-research-retreat-fall-2022)
 
 # 2021
 
