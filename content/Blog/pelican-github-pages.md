@@ -1,4 +1,4 @@
-Title: How I built my personal blog using Pelican
+Title: How I built my blog using Pelican
 Date: 2023-07-13
 Tags: Pelican, Python, Github, Github Pages, Website, Programming
 Category: Website
