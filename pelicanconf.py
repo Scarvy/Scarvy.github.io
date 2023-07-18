@@ -5,7 +5,7 @@ TIMEZONE = 'US/Eastern'
 DEFAULT_LANG = 'en'
 
 SUBTITLE = '''Hi, I'm Scott!'''
-SUBTEXT = '''This is my personal blog.
+SUBTEXT = '''Welcome to my blog.
 '''
 COPYRIGHT = '©2022'
 PATH = 'content'
