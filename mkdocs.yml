@@ -1,0 +1,43 @@
+site_name: Scott Carvalho's Thoughts and Writings
+site_url: https://scarvy.github.io
+
+theme:
+  name: material
+  favicon: assets/logo.ico
+  icon:
+    logo: material/library-shelves 
+
+  palette:
+
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: deep purple
+    accent: red
+    toggle:
+      icon: material/weather-night 
+      name: Switch to dark mode
+
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: deep purple
+    accent: red
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
+
+  features:
+    - navigation.tabs
+
+plugins:
+  - search
+  - tags
+  - offline
+  - blog
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags 
+
