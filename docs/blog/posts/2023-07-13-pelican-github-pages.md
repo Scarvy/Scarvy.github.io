@@ -1,12 +1,16 @@
-Title: How I built my blog using Pelican
-Date: 2023-07-13
-Tags: Pelican, Python, Github, Github Pages, Website, Programming
-Category: Website
-Summary: Step-by-step instruction on how to build a blog using Pelican and GitHub Pages
+---
+date: 2023-07-13
+categories: 
+    - web development
+---
+
+# Building a static website using Pelican
 
 ## Intro
 
 If you're looking to create a personal blog or website, I found [Pelican](https://getpelican.com/) is an excellent option for generating static web pages. Pelican is a Python-based static site generator that is easy to use and allows you to create content in Markdown or reStructuredText format.
+
+<!-- more -->
 
 To host my website, GitHub has a service called [GitHub Pages](https://pages.github.com/) that lets users host personal websites for free!
 
@@ -27,15 +31,15 @@ To create a new Pelican project, I recommend creating a virtual environment.
 I use [pyenv](https://github.com/pyenv/pyenv). Open a terminal window and run the following command:
 
 ``` bash
-$ pyenv virtualenv <python_version> <virtualenv_name>
-$ pyenv activate <virtualenv_name>
+pyenv virtualenv <python_version> <virtualenv_name>
+pyenv activate <virtualenv_name>
 ```
 
 Example:
 
 ``` bash
-$ pyenv virtualenv 3.9.15 myenv
-$ pyenv activate myenv
+pyenv virtualenv 3.9.15 myenv
+pyenv activate myenv
 ```
 
 Next, create a new project directory and navigate to that directory with these commands:
@@ -69,9 +73,9 @@ Three directories, five files
 
 In this example, we can see the directory structure of the Pelican project, which includes the content directory where you can place your Markdown and reStructuredText documents, as well as any other content such as images, PDFs, and more. The project includes a `Makefile,` `pelicanconf.py,` and `publishconf.py` file.
 
- - `Makefile` provides pre-built bash commands to build or deploy your website.
- - `pelicanconf.py` configure the site's settings during the development phase
- - `publishconf.py` used for the production phase
+- `Makefile` provides pre-built bash commands to build or deploy your website.
+- `pelicanconf.py` configure the site's settings during the development phase
+- `publishconf.py` used for the production phase
 
 ## Step 2: Create and Customize Your Content
 
@@ -93,11 +97,11 @@ The command will generate your static web pages in the output directory.
 
 Next, you'll need to create a new repository on GitHub to host your Pelican site. Go to your Github account and create a new repository with the name `<username>`.github.io, where `<username>` is your Github username.
 
-<img src="{static}/images/github-repo-create.jpg" alt="large" class="image-center"/>
+![github-repo-create](../images/github-repo-create.jpg)
 
 ## Step 5: Deploy Your Site to Github Pages
 
-A Makefile is created in the project's root directory with pre-built bash commands to build or deploy your website. 
+A Makefile is created in the project's root directory with pre-built bash commands to build or deploy your website.
 
 To deploy your Pelican site to Github Pages, change the `GITHUB_PAGES_BRANCH` constant in the Makefile to *gh-pages*.
 
