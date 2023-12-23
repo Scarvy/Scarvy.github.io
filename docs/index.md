@@ -36,4 +36,4 @@ These days, I mostly write in 🐍 Python but hope to explore other languages li
 
 ## 📋 Resume
 
-You can view my CV [here](extra/Resume.pdf)
+You can view my CV [here](extra/Scott%20Carvalho%20Resume.pdf)
