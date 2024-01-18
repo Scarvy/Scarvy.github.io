@@ -9,24 +9,45 @@ theme:
 
   palette:
 
-  - media: "(prefers-color-scheme: light)"
-    scheme: default
-    primary: deep purple
-    accent: red
-    toggle:
-      icon: material/weather-night 
-      name: Switch to dark mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
 
-  - media: "(prefers-color-scheme: dark)"
-    scheme: slate
-    primary: deep purple
-    accent: red
-    toggle:
-      icon: material/weather-sunny
-      name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: red
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
   features:
     - navigation.tabs
+    - navigation.footer
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Scarvy
+      name: GitHub
+    - icon: fontawesome/brands/x-twitter
+      link: twitter.com/ScottCarvalho_
+      name: Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/scottcarvalho
+      name: LinkedIn
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<scottcarvalho71@gmail.com>
+      name: Email 
 
 plugins:
   - search
