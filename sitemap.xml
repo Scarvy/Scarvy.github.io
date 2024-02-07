@@ -2,92 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://scarvy.github.io/index.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/bookmarks.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/index.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2023/07/12/welcome.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2023/07/13/building-a-static-website-using-pelican.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2023/11/11/the-changelog---v010.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2023/11/20/the-changelog---v020.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2023/11/28/the-changelog---v030.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2023/12/20/the-changelog---v040.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2023/12/28/the-changelog---v050.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2024/01/09/the-changelog---v060.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2024/01/16/the-changelog---v070.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/2024/01/26/the-changelog---v080.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://scarvy.github.io/blog/2024/02/06/the-changelog---v090.html</loc>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/archive/2024.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/archive/2023.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/category/changelog.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/category/web-development.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://scarvy.github.io/blog/category/personal.html</loc>
-         <lastmod>2024-01-26</lastmod>
+         <lastmod>2024-02-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://scarvy.github.io/blog/page/2/index.html</loc>
+         <lastmod>2024-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
