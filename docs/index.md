@@ -6,9 +6,7 @@ I'm a former quantitative researcher and passionate developer interested in web 
 
 I'm currently located in the Boston area.
 
-These days, I mostly write in 🐍 Python but hope to explore other languages like C++, Rust and TypeScript.
-
-**🎙 Update: I'll be starting 📚 graduate school this upcoming Spring 2024.**
+These days, I mostly write in 🐍 Python and TypeScript.
 
 ## 📩 Contact
 
