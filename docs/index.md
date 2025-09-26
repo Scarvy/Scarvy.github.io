@@ -11,7 +11,7 @@ These days, I mostly write in 🐍 Python and TypeScript.
 ## 📩 Contact
 
 - [📧 scottcarvalho71@gmail](mailto:scottcarvalho71@gmail)
-- [🐦 twitter.com/ScottCarvalho_](https://twitter.com/ScottCarvalho_)
+- [🐦 twitter.com/ScottCarvalho_](_Scarvy)
 - [🔗 linkedin.com/in/scottcarvalho](https://www.linkedin.com/in/scottcarvalho)
 - [👾 github.com/Scarvy](https://github.com/Scarvy)
 
