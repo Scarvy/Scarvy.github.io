@@ -1,0 +1,10 @@
+[project]
+name = "my-personal-blog"
+version = "0.0.1"
+dependencies = [
+    "mkdocs-material",
+    "mkdocs-rss-plugin",
+]
+
+[tool.uv]
+package = false
