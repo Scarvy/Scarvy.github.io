@@ -1,10 +1,13 @@
 [project]
 name = "my-personal-blog"
 version = "0.0.1"
-dependencies = [
-    "mkdocs-material",
-    "mkdocs-rss-plugin",
-]
+requires-python = ">=3.12"
+dependencies = []
 
 [tool.uv]
 package = false
+
+[dependency-groups]
+dev = [
+    "zensical>=0.0.29",
+]
