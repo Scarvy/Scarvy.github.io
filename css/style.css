@@ -184,6 +184,16 @@ th, td { border: 1px solid var(--border); padding: 0.4rem 0.6rem; }
 .timeline details[open] > summary h3::after { transform: rotate(45deg); vertical-align: 0.3em; }
 .timeline details[open] > summary { margin-bottom: 0.4rem; }
 
+.timeline .desc {
+  margin-top: 0;
+  padding: 0.6rem 0.85rem;
+  background: var(--code-bg);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+.timeline .desc ul { margin-top: 0.4rem; }
+
 .timeline ul { margin: 0.5rem 0 0; padding-left: 1.1rem; }
 
 .site-footer {
