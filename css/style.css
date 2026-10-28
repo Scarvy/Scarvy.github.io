@@ -46,6 +46,10 @@ body {
   padding-inline: 1rem;
 }
 
+@media (max-width: 480px) {
+  .site-header, main, .site-footer { padding-inline: 1.5rem; }
+}
+
 .site-header {
   display: flex;
   flex-wrap: wrap;
