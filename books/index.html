@@ -97,6 +97,8 @@
     }
     .status { color: var(--muted); }
     .source { color: var(--muted); font-size: 0.85rem; margin-top: 2.5rem; }
+    .source a { display: inline-flex; align-items: center; gap: 0.35rem; vertical-align: bottom; }
+    .source img { width: 16px; height: 16px; transform: rotate(-6deg); }
   </style>
 </head>
 <body>
@@ -122,7 +124,7 @@
       <ul class="finished" id="finished"></ul>
       <button class="more" id="more" type="button" hidden></button>
 
-      <p class="source">From <a href="https://readwise.io/books_api">Readwise Books</a>. Updates every few minutes.</p>
+      <p class="source">Powered by <a href="https://readwise.io/books/store/"><img src="/assets/readwise-books.png" alt="" width="16" height="16">Readwise Books</a></p>
     </section>
   </main>
   <footer class="site-footer">
