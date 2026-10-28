@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Books – Scott Carvalho</title>
+  <meta name="description" content="What Scott Carvalho is reading now and has read recently.">
+  <link rel="icon" href="/assets/logo.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/main.js"></script>
+  <style>
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+      gap: 0.75rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .stat {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+    }
+    .stat strong { display: block; font-size: 1.6rem; line-height: 1.2; font-variant-numeric: tabular-nums; }
+    .stat span { color: var(--muted); font-size: 0.85rem; }
+
+    .shelf {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+      gap: 1.25rem 1rem;
+    }
+    .shelf a, .finished a { color: inherit; text-decoration: none; }
+    .shelf a:hover .title, .finished a:hover .title { color: var(--accent); }
+
+    .cover {
+      display: block;
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 4px;
+      background: var(--code-bg);
+      box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+    }
+    .cover.placeholder {
+      display: grid;
+      place-items: center;
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      box-shadow: none;
+      overflow: hidden;
+    }
+    .cover.placeholder span {
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+    .finished .cover.placeholder { padding: 0.25rem; font-size: 0.6rem; line-height: 1.2; }
+    .finished .cover.placeholder span { -webkit-line-clamp: 3; line-clamp: 3; }
+    .title { display: block; font-weight: 600; font-size: 0.9rem; line-height: 1.3; margin-top: 0.5rem; }
+    .title, .cover.placeholder span {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .title { -webkit-line-clamp: 2; line-clamp: 2; }
+    .author { display: block; color: var(--muted); font-size: 0.8rem; line-height: 1.3; }
+
+    .finished { list-style: none; padding: 0; }
+    .finished > li {
+      display: grid;
+      grid-template-columns: 3.5rem 1fr;
+      gap: 1rem;
+      padding-block: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .finished .title { margin-top: 0; font-size: 1rem; }
+    .finished .meta { margin: 0.2rem 0 0; font-size: 0.85rem; }
+    .rating { color: var(--accent); letter-spacing: 0.05em; }
+    .finished details { margin-top: 0.4rem; font-size: 0.9rem; }
+    .finished summary { cursor: pointer; color: var(--muted); }
+    .finished details p { margin: 0.4rem 0 0; white-space: pre-line; }
+
+    .more {
+      margin-top: 1rem;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--fg);
+      padding: 0.4rem 1rem;
+      font: inherit;
+      cursor: pointer;
+    }
+    .status { color: var(--muted); }
+    .source { color: var(--muted); font-size: 0.85rem; margin-top: 2.5rem; }
+    .source a { display: inline-flex; align-items: center; gap: 0.35rem; vertical-align: bottom; }
+    .source img { width: 16px; height: 16px; transform: rotate(-6deg); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="/">Scott Carvalho</a>
+    <nav>
+      <a href="/books/" aria-current="page">Books</a>
+      <a href="/extra/Scott-Carvalho-Resume.pdf">Resume</a>
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+  <main>
+    <h1>Books</h1>
+    <p id="status" class="status">Loading…</p>
+
+    <section id="books" hidden>
+      <div class="stats" id="stats"></div>
+
+      <h2>Reading now</h2>
+      <ul class="shelf" id="reading"></ul>
+
+      <h2>Recently finished</h2>
+      <ul class="finished" id="finished"></ul>
+      <button class="more" id="more" type="button" hidden></button>
+
+      <p class="source">Powered by <a href="https://readwise.io/books/"><img src="/assets/readwise-books.png" alt="" width="16" height="16">Readwise Books</a></p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Scott Carvalho</p>
+  </footer>
+
+  <script>
+    // Public token: read-only access to the books and totals published for this site.
+    const TOKEN = "bwpub_bP12s1zYimkqRMBv7eBVYgAAibStmYIP1ak9A4zfPJJIMUsPGz";
+    const API = "https://readwise.io/books/api/v1/public/1053803";
+    const CACHE_MS = 5 * 60 * 1000; // the API sends max-age=300
+    const RECENT = 12;
+
+    async function get(url) {
+      const key = "books:" + url;
+      try {
+        const hit = JSON.parse(localStorage.getItem(key));
+        if (hit && Date.now() - hit.t < CACHE_MS) return hit.data;
+      } catch {}
+
+      const res = await fetch(url, { headers: { "Books-Public-Token": TOKEN } });
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      const data = await res.json();
+      try { localStorage.setItem(key, JSON.stringify({ t: Date.now(), data })); } catch {}
+      return data;
+    }
+
+    // Follows `next` until it is null.
+    async function getAll(url) {
+      const books = [];
+      while (url) {
+        const page = await get(url);
+        books.push(...page.results);
+        url = page.next;
+      }
+      return books;
+    }
+
+    function el(tag, attrs = {}, ...children) {
+      const node = document.createElement(tag);
+      for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, v);
+      node.append(...children.filter((c) => c != null));
+      return node;
+    }
+
+    function cover(book) {
+      const src = book.product?.cover_url;
+      if (!src) return el("span", { class: "cover placeholder" }, el("span", {}, book.title || "Untitled"));
+      return el("img", { class: "cover", src, alt: "", loading: "lazy" });
+    }
+
+    function link(book, ...children) {
+      const href = book.product?.store_url;
+      return href ? el("a", { href }, ...children) : el("span", {}, ...children);
+    }
+
+    function stars(rating) {
+      const full = Math.round(rating);
+      return "★".repeat(full) + "☆".repeat(5 - full);
+    }
+
+    const date = (iso) =>
+      new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+
+    function stat(value, label) {
+      return el("div", { class: "stat" }, el("strong", {}, value), el("span", {}, label));
+    }
+
+    function readingItem(book) {
+      return el("li", {}, link(book,
+        cover(book),
+        el("span", { class: "title", title: book.title || "" }, book.title || "Untitled"),
+        el("span", { class: "author" }, book.author),
+      ));
+    }
+
+    function finishedItem(book) {
+      const meta = book.finished_reading_at ? `Finished ${date(book.finished_reading_at)}` : "";
+      return el("li", {},
+        link(book, cover(book)),
+        el("div", {},
+          link(book, el("span", { class: "title", title: book.title || "" }, book.title || "Untitled")),
+          el("span", { class: "author" }, book.author),
+          el("p", { class: "meta" },
+            meta,
+            book.rating != null ? el("span", { class: "rating", title: `${book.rating} / 5` }, "  " + stars(book.rating)) : null,
+          ),
+          book.review ? el("details", {}, el("summary", {}, "My review"), el("p", {}, book.review)) : null,
+        ),
+      );
+    }
+
+    async function main() {
+      const status = document.getElementById("status");
+      try {
+        const thisYear = new Date().getFullYear();
+        const [reading, finished, total, year] = await Promise.all([
+          getAll(`${API}/books?status=currently_reading&order=-started_reading_at&limit=1000`),
+          getAll(`${API}/books?status=finished&order=-finished_reading_at&limit=1000`),
+          get(`${API}/stats`),
+          get(`${API}/stats?year=${thisYear}`),
+        ]);
+
+        document.getElementById("stats").append(
+          stat(total.books_finished, "books finished"),
+          stat(year.books_finished, `finished in ${thisYear}`),
+          stat(Math.round(total.total_time_seconds / 3600), "hours read"),
+          stat(total.session_count, "reading sessions"),
+        );
+
+        document.getElementById("reading").append(...reading.map(readingItem));
+
+        const list = document.getElementById("finished");
+        list.append(...finished.slice(0, RECENT).map(finishedItem));
+        const more = document.getElementById("more");
+        if (finished.length > RECENT) {
+          more.hidden = false;
+          more.textContent = `Show all ${finished.length}`;
+          more.addEventListener("click", () => {
+            list.append(...finished.slice(RECENT).map(finishedItem));
+            more.remove();
+          });
+        }
+
+        status.remove();
+        document.getElementById("books").hidden = false;
+      } catch (err) {
+        status.textContent = "Couldn't load books right now. Try again in a few minutes.";
+        console.error(err);
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>
