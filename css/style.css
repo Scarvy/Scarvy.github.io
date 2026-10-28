@@ -160,6 +160,30 @@ th, td { border: 1px solid var(--border); padding: 0.4rem 0.6rem; }
 .timeline time { color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
 .timeline h3 { margin: 0.1rem 0 0.4rem; font-size: 1.1rem; }
 .timeline p { margin: 0; }
+.timeline summary {
+  display: block;
+  margin-top: 0.1rem;
+  line-height: 1.3;
+  cursor: pointer;
+  list-style: none;
+}
+.timeline summary::-webkit-details-marker { display: none; }
+.timeline summary h3 { display: inline; font-size: 1.1rem; }
+.timeline summary h3::before {
+  content: "";
+  display: inline-block;
+  width: 0.38em;
+  height: 0.38em;
+  margin-right: 0.55em;
+  vertical-align: 0.18em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s;
+}
+.timeline details[open] > summary h3::before { transform: rotate(45deg); vertical-align: 0.3em; }
+.timeline details[open] > summary { margin-bottom: 0.4rem; }
+
 .timeline ul { margin: 0.5rem 0 0; padding-left: 1.1rem; }
 
 .site-footer {
